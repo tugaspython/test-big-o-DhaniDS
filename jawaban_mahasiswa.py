@@ -1,10 +1,12 @@
-# File: jawaban_mahasiswa.py (Solusi Profesional)
 def cari_pasangan(arr, target):
-    # Menggunakan Set (Kompleksitas O(N))
-    angka_dilihat = set()
+    angka_ditemukan = set()
+
     for angka in arr:
-        pasangan_dibutuhkan = target - angka
-        if pasangan_dibutuhkan in angka_dilihat:
+        pasangan = target - angka
+
+        if pasangan in angka_ditemukan:
             return True
-        angka_dilihat.add(angka)
+
+        angka_ditemukan.add(angka)
+
     return False
